@@ -11,18 +11,18 @@
 
 
   <body class="has-background-dark">
-
     <nav class="navbar is-primary text is-dark border-bottom border-4 border-light" role="navigation" aria-label="main navigation">
-
-  <div id="navbarBasicExample" class="navbar-menu">
+  <div class="navbar-menu">
     <div class="navbar-start">
-      <a onclick="home()" class="navbar-item has-text-dark ">
-        Home
-      </a>
+        <div class="buttons ml-3">
+          <button onclick="home()" id ="signup-btn" class="button is-dark has-text-success border border-4 border-dark">
+            <strong>Home</strong>
+          </button>
+        </div>
 
-      <a class="navbar-item has-text-dark" href="https://github.com/evohat3/tech-blog">
+      {{!-- <a class="navbar-item has-text-dark" href="https://github.com/evohat3/tech-blog">
         Dashboard
-      </a>
+      </a> --}}
     </div>
 
     <div class="navbar-end">
@@ -33,7 +33,7 @@
           </button>
           
           <a class="button is-dark border border-4 border-dark">
-            <strong class="has-text-success">Log in</strong>
+            <strong onclick="login()" class="has-text-success">Log in</strong>
           </a>
         </div>
       </div>
@@ -71,6 +71,12 @@ function signUp() {
   
 function home() {
     document.location.replace('/');
+}
+</script>
+
+<script>
+function login() {
+    document.location.replace('/login');
 }
 </script>
 

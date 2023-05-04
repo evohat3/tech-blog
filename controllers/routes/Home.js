@@ -9,5 +9,9 @@ router.get('/signup', async (req,res) => {
   res.render('signup', {layout: 'index'});
 });
 
+router.get('/login', async (req,res) => {
+  res.render('login', {layout: 'index'})
+})
+
 
 module.exports = router
