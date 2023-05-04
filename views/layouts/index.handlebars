@@ -16,21 +16,21 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item has-text-dark ">
-        <strong>Home</strong>
+      <a onclick="home()" class="navbar-item has-text-dark ">
+        Home
       </a>
 
       <a class="navbar-item has-text-dark" href="https://github.com/evohat3/tech-blog">
-        <strong>Dashboard</strong>
+        Dashboard
       </a>
     </div>
 
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-danger has-text-dark border border-4 border-dark">
+          <button onclick="signUp()" id ="signup-btn" class="button is-danger has-text-dark border border-4 border-dark">
             <strong>Sign up</strong>
-          </a>
+          </button>
           
           <a class="button is-dark border border-4 border-dark">
             <strong class="has-text-success">Log in</strong>
@@ -44,7 +44,10 @@
 <section class="section">
   <h1 class="title">Section</h1>
   <h2 class="subtitle">
+
+
    {{{ body }}}
+
   </h2>
 </section>
 
@@ -52,13 +55,26 @@
 
 
 
-<footer class="footer has-background-primary border-top border-5 border-ligh " >
+<footer class="footer has-background-primary border-top border-5 border-light p-6" >
   <div class="content has-text-centered has-text-dark ">
 by Nigel Poblete
   </div>
 </footer>
 
-<script src="/public/scripts.js"></script>
+<script>
+function signUp() {
+  document.location.replace('/signup');
+}
+</script>
+
+<script>
+  
+function home() {
+    document.location.replace('/');
+}
+</script>
+
+<script src="/js/scripts.js">
   </body>
 
 </html>
