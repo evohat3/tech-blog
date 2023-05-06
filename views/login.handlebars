@@ -3,7 +3,7 @@
 
 
 <div class="box has-background-danger border border-4 border-dark w-50 mx-auto">
-  <h1 class="has-text-centered mb-6"><strong class="has-text-dark">Log In</strong></h1>
+  <h1 href="/login" class="has-text-centered mb-6"><strong class="has-text-dark">Log In</strong></h1>
 </div>
 
 
@@ -12,7 +12,7 @@
 <div class="field w-50 mx-auto">
   <label class="label has-text-white mb-5">Email</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input has-text-grey w-75 border border-4 border-dark" type="text" placeholder="Email" value="">
+    <input id="loginEmailBtn" class="input has-text-grey w-75 border border-4 border-dark" type="text" placeholder="Email" value="">
     <span class="icon is-small is-left">
       <i class="fas fa-user"></i>
     </span>
@@ -24,7 +24,7 @@
 <div class="field mt-6 mx-auto">
   <label class="label has-text-white mb-5">Password</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input has-text-grey w-75 border border-4 border-dark" type="email" placeholder="Password" value="">
+    <input id="loginPasswordBtn" class="input has-text-grey w-75 border border-4 border-dark" type="email" placeholder="Password">
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
@@ -35,14 +35,11 @@
 
 <div class="field is-grouped mt-6">
   <div class="control">
-    <button class="button is-primary has-text-dark border border-4 border-dark"><strong>Log In</strong></button>
+    <button id="loginLogBtn" class="button is-primary has-text-dark border border-4 border-dark"><strong>Log In</strong></button>
   </div>
   <div class="control">
-    <button class="button is-primary border border-4 border-dark"><strong class="has-text-dark">Cancel</strong></button>
+    <button id="loginCancelBtn"class="button is-primary border border-4 border-dark"><strong class="has-text-dark">Cancel</strong></button>
+      </div>
+    </div>
   </div>
-</div>
-
-</div>
-
-
 </div>

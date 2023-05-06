@@ -1,16 +1,25 @@
 const router = require('express').Router();
+const { Blog, User } = require('../../models');
+// const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
-  // Send the rendered Handlebars.js template back as the response
-  res.render('home', {layout: 'index'});
+router.get('/', async (req, res) => { 
+
+  const blogData = await Blog.findAll({include: User}).catch((err) => {
+    res.json(err)
+
+  });
+const blogs = blogData.map((blog) => blog.get({ plain: true })); 
+
+console.log(blogs)
+res.render('home', {blogs} )
 });
 
 router.get('/signup', async (req,res) => {
-  res.render('signup', {layout: 'index'});
+  res.render('signup');
 });
 
 router.get('/login', async (req,res) => {
-  res.render('login', {layout: 'index'})
+  res.render('login')
 })
 
 

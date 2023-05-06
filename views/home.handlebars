@@ -27,12 +27,15 @@
     <div class="tile is-parent">
       <article class="tile is-child notification is-primary border border-4 border-dark">
         <p class="title has-text-dark">Recent Posts</p>
+          {{#each blogs as |blog|}}
         <div class="content">
+          <h5> {{blog.name}} </h5>
           <div class="box has-background-danger has-text-white border border-4 border-dark">
-            <p>BLOG POSTS WILL SHOW HERE</p>
-                       {{!-- {{blogs}} --}}
-          </div>
+            <h6>{{blog.comment}}</h6>
+            <strong>written by: {{user.name}}</strong>
+          </div>  
       </div>
+              {{/each}}
     </div>  
   </div>
 

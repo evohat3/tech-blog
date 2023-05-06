@@ -35,6 +35,14 @@
           <a class="button is-dark border border-4 border-dark">
             <strong onclick="login()" class="has-text-success">Log in</strong>
           </a>
+
+    <!-- Only displays the logout button if the user is logged in -->
+    {{#if logged_in}}
+    <nav>
+      <button class="btn" id="logout">logout</button>
+    </nav>
+    {{/if}}
+
         </div>
       </div>
     </div>
@@ -80,7 +88,8 @@ function login() {
 }
 </script>
 
-<script src="/js/scripts.js">
+<script src="/js/scripts.js"> </script>
+
   </body>
 
 </html>
