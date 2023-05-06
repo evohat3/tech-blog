@@ -29,10 +29,10 @@
         <p class="title has-text-dark">Recent Posts</p>
           {{#each blogs as |blog|}}
         <div class="content">
-          <h5> {{blog.name}} </h5>
-          <div class="box has-background-danger has-text-white border border-4 border-dark">
-            <h6>{{blog.comment}}</h6>
-            <strong>written by: {{user.name}}</strong>
+          <div class="box has-background-dark border border-4 border-dark">
+            <h5 class="has-text-primary">{{blog.name}} </h5>
+            <h6 class="has-text-light">{{blog.comment}}</h6>
+            <strong class="has-text-danger">written by: {{user.name}}</strong>
           </div>  
       </div>
               {{/each}}
