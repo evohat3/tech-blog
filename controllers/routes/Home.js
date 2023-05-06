@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Blog, User } = require('../../models');
-// const withAuth = require('../utils/auth');
+
 
 router.get('/', async (req, res) => { 
 
@@ -19,6 +19,7 @@ router.get('/signup', async (req,res) => {
 });
 
 router.get('/login', async (req,res) => {
+
   res.render('login')
 })
 
